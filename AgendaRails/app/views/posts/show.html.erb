@@ -1,0 +1,26 @@
+<b><%=  stylesheet_link_tag  'estilo' %></b>
+<h1>V i s u a l i z a ç ã o</h1>
+<p>
+  <b>Nome:</b>
+  <%=h @post.title %>
+</p>
+<p>
+  <b>Endereco:</b>
+  <%=h @post.endereco %>
+</p>
+<p>
+  <b>Telefone:</b>
+  <%=h @post.telefone %>
+</p>
+<p>
+  <b>Email:</b>
+  <%=h @post.email %>
+</p>
+<p>
+  <b>Descrição:</b>
+  <%=h @post.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<title>Agenda</title>
+  <head>
+
+  <b><%=  stylesheet_link_tag  'estilo' %></b>
+</head>
+<body>
+<h1>Agenda</h1>
+<br/>
+<h2>
+<%= link_to 'Novo contato', new_post_path %><br/>
+
+</h2>
+<br>
+</br>
+<hr>
+<% for post in @posts.reverse %>
+  <h2><%= post.title %></h2>
+
+  <small>
+    <%= link_to "Mais",
+      :action => "show",
+      :id => post %>
+  </small>
+  <small><%= link_to 'Remover', post, :confirm => 'Deseja remover o Contato', :method => :delete %>
+    </small>
+<hr>
+<% end %>
+</body>
+</html>
+
